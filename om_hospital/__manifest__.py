@@ -15,6 +15,7 @@ Hospital.
     ],
     'data': [
         'security/ir.model.access.csv',
+        'data/data.xml',
         'views/hospital.xml',
     ],
     'sequence':'-100',

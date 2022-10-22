@@ -33,8 +33,11 @@ class HospitalPatient(models.Model):
         self.state = 'done'
     def action_cancel(self):
         self.state = 'cancel'
+
+
     @api.model
     def create(self, vals_list):
+        #check if patient age field is empty
         if not vals_list.get('pat_age'):
             vals_list['pat_age'] = 18
         res = super(HospitalPatient,self).create(vals_list)
