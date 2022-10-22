@@ -12,7 +12,7 @@ class HospitalPatient(models.Model):
     _inherit=['mail.thread','mail.activity.mixin']
 
     pat_name= fields.Char('Full Name')
-    pat_age= fields.Integer('Age')
+    pat_age= fields.Integer(string='Age',tracking=True)
     pat_gender= fields.Selection([
         ('male','Male'),
         ('female','Female')
@@ -20,7 +20,7 @@ class HospitalPatient(models.Model):
     pat_img= fields.Binary('Image')
 
     state = fields.Selection([('draft','Draft'),('confirm','Confirmed'),
-                              ('done','Done'),('cancel','Cancel')],default='draft',string='status')
+                              ('done','Done'),('cancel','Cancel')],default='draft',string='status',tracking=True)
 
     def action_confirm(self):
         self.state = 'confirm'
