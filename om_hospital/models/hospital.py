@@ -41,6 +41,8 @@ class HospitalPatient(models.Model):
         #check if patient age field is empty
         if not vals_list.get('pat_age'):
             vals_list['pat_age'] = 18
+        if vals_list.get('reference', _('New')) == _('New'):
+            vals_list['reference'] = self.env['ir.sequence'].next_by_code('hospital.patient') or _('New')
         res = super(HospitalPatient,self).create(vals_list)
         return res
 
