@@ -8,8 +8,8 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='website']" position="after">
-                <field name="con_prenom" domain="[('is_company', '=', False)]"/>
-                <field name="con_age" domain="[('is_company', '=', False)]"/>
+                <field name="con_prenom" attrs="{'invisible': [('is_company','=', False)]}"/>
+                <field name="con_age" attrs="{'invisible': [('is_company','=', False)]}"/>
             </xpath>
         </field>
     </record>
