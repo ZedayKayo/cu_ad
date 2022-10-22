@@ -18,9 +18,12 @@ class HospitalPatient(models.Model):
         ('female','Female')
     ],required=True,default='male',string='Gender')
     pat_img= fields.Binary('Image')
+    responsible_id = fields.Many2one(comodel_name='res.partner',string='Responsible')
 
+    
     state = fields.Selection([('draft','Draft'),('confirm','Confirmed'),
                               ('done','Done'),('cancel','Cancel')],default='draft',string='status',tracking=True)
+    
 
     def action_confirm(self):
         self.state = 'confirm'
