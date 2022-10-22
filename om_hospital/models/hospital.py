@@ -25,7 +25,7 @@ class HospitalPatient(models.Model):
                               ('done','Done'),('cancel','Cancel')],default='draft',string='status')
 
     def action_confirm(self):
-        messagebox.showinfo("Debug MessageBox", "action_confirm is called.")
+        self.state = 'confirm'
 
 
 
