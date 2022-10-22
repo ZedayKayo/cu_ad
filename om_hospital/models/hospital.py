@@ -1,5 +1,5 @@
 from email.policy import default
-from odoo import fields,models
+from odoo import fields,models,api
 
 
 
@@ -20,7 +20,7 @@ class HospitalPatient(models.Model):
     pat_img= fields.Binary('Image')
     responsible_id = fields.Many2one(comodel_name='res.partner',string='Responsible')
 
-    
+
     state = fields.Selection([('draft','Draft'),('confirm','Confirmed'),
                               ('done','Done'),('cancel','Cancel')],default='draft',string='status',tracking=True)
     
@@ -33,7 +33,12 @@ class HospitalPatient(models.Model):
         self.state = 'done'
     def action_cancel(self):
         self.state = 'cancel'
-
+    @api.model
+    def create(self, vals_list):
+        if not vals_list.get('age'):
+            vals_list['age'] = 18
+        res = super(HospitalPatient,self).create(vals_list)
+        return res
 
 
     
