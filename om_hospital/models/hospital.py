@@ -5,7 +5,7 @@ class HospitalPatient(models.Model):
     _name='hospital.patient'
     _description = 'hospital management system'
 
-    _inherit=['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
     pat_name= fields.Char('Full Name')
     pat_age= fields.Integer('Age')
