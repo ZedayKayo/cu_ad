@@ -35,8 +35,8 @@ class HospitalPatient(models.Model):
         self.state = 'cancel'
     @api.model
     def create(self, vals_list):
-        if not vals_list.get('age'):
-            vals_list['age'] = 18
+        if not vals_list.get('pat_age'):
+            vals_list['pat_age'] = 18
         res = super(HospitalPatient,self).create(vals_list)
         return res
 
