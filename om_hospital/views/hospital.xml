@@ -108,6 +108,7 @@
                 <field name="pat_name"/>
                 <field name="pat_age"/>
                 <field name="pat_gender"/>
+                <field name="state"/>
             </tree>
         </field>
     </record>
