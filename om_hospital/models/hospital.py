@@ -1,6 +1,12 @@
 from email.policy import default
 from odoo import fields,models
 
+
+import tkinter
+from tkinter import messagebox
+
+
+
 class HospitalPatient(models.Model):
     _name='hospital.patient'
     _description = 'hospital management system'
@@ -19,7 +25,7 @@ class HospitalPatient(models.Model):
                               ('done','Done'),('cancel','Cancel')],default='draft',string='status')
 
     def action_confirm(self):
-        print('action_confirm is called.')
+        messagebox.showinfo("Debug MessageBox", "action_confirm is called.")
 
 
 
