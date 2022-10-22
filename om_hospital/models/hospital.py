@@ -18,6 +18,9 @@ class HospitalPatient(models.Model):
     state = fields.Selection([('draft','Draft'),('confirm','Confirm'),
                               ('done','Done'),('cancel','Cancel')],default='draft',string='status')
 
+    def action_confirm(self):
+        print('action_confirm is called.')
+
 
 
     

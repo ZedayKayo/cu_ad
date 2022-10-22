@@ -74,6 +74,7 @@
         <field name="arch" type="xml">
             <form>
                 <header>
+                    <button name="action_confirm" type="object" string="Confirm" class="oe_highlight" id='buttom_confirm'/>
                     <field name="state" widget="statusbar" options="{'clickable':'1','fold_field':'fold'}"/>
                 </header>
                 <sheet>
