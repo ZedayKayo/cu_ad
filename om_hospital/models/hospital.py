@@ -19,11 +19,17 @@ class HospitalPatient(models.Model):
     ],required=True,default='male',string='Gender')
     pat_img= fields.Binary('Image')
 
-    state = fields.Selection([('draft','Draft'),('confirm','Confirm'),
+    state = fields.Selection([('draft','Draft'),('confirm','Confirmed'),
                               ('done','Done'),('cancel','Cancel')],default='draft',string='status')
 
     def action_confirm(self):
         self.state = 'confirm'
+    def action_draft(self):
+        self.state = 'draft'
+    def action_done(self):
+        self.state = 'done'
+    def action_cancel(self):
+        self.state = 'cancel'
 
 
 

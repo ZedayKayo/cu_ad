@@ -74,7 +74,10 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button name="action_confirm" type="object" string="Confirm" class="oe_highlight" id='buttom_confirm'/>
+                    <button name="action_confirm" type="object" string="Confirm" class="oe_highlight" id='button_confirm'/>
+                    <button name="action_done" type="object" string="Done" class="oe_highlight" id='button_done' states="confirm"/>
+                    <button name="action_draft" type="object" string="Draft" class="oe_highlight" id='button_draft'  states='cancel,confirm'/>
+                    <button name="action_cancel" type="object" string="Cancel"  id='button_cancel' states='draft,done,confirm'/>
                     <field name="state" widget="statusbar" options="{'clickable':'1','fold_field':'fold'}"/>
                 </header>
                 <sheet>
