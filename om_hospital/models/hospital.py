@@ -19,6 +19,7 @@ class HospitalPatient(models.Model):
     ],required=True,default='male',string='Gender')
     pat_img= fields.Binary('Image')
     responsible_id = fields.Many2one(comodel_name='res.partner',string='Responsible')
+    reference = fields.Char(string="Order Reference",required=True,copy=False,readonly=True,default=lambda self: _('New'))
 
 
     state = fields.Selection([('draft','Draft'),('confirm','Confirmed'),
