@@ -15,6 +15,9 @@ class HospitalPatient(models.Model):
     ],required=True,default='male',string='Gender')
     pat_img= fields.Binary('Image')
 
+    state = fields.Selection([('draft','Draft'),('confirm','Confirm'),
+                              ('done','Done'),('cancel','Cancel')],default='draft',string='status')
+
 
 
     
