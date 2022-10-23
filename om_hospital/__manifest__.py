@@ -16,7 +16,8 @@ Hospital.
     'data': [
         'security/ir.model.access.csv',
         'data/data.xml',
-        'views/hospital.xml',
+        'views/patient_view.xml',
+        'views/kids_view.xml',
     ],
     'sequence':'-100',
     'demo': [

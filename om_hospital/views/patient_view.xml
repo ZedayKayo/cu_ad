@@ -129,11 +129,24 @@
         id="hospital_menu"
         name="Hospital"
         sequence="10"
-        action='hospital_patient_action'/>
+        />
+
+    <menuitem
+        id="<menuitem
+        id="patient_menu_root"
+        name="Patients"
+        parent="hospital_menu"
+        sequence="10"
+        />"
+        name="Patients"
+        parent="hospital_menu"
+        sequence="10"
+        />
     <menuitem
         id="patient_menu"
-        parent="hospital_menu"
         name="Patients"
+        parent="patient_menu_root"
         sequence="10"
+        action='hospital_patient_action'
         />
 </odoo>
