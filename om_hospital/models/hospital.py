@@ -1,5 +1,5 @@
 from email.policy import default
-from odoo import fields,models,api
+from odoo import fields,models,api,_
 
 
 
