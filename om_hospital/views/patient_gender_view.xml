@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- Action menu -->
+    <record id="hospital_patient_male_action" model="ir.actions.act_window">
+        <field name="name">Male Patients</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="domain">[('pat_gender','=','male')]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class='o_view_nocontent_smiling_face'>Create New Kid!</p>
+        </field>
+    </record>
+    <record id="hospital_patient_female_action" model="ir.actions.act_window">
+        <field name="name">Female Patients</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="domain">[('pat_gender','=','female')]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class='o_view_nocontent_smiling_face'>Create New Kid!</p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_patient_male"
+        name="Male Patients"
+        parent="patient_menu_root"
+        sequence="10"
+        action="hospital_patient_male_action"
+        />
+    <menuitem
+        id="menu_patient_female"
+        name="Female Patients"
+        parent="patient_menu_root"
+        sequence="10"
+        action="hospital_patient_female_action"
+        />
+</odoo>

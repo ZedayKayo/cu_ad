@@ -18,6 +18,7 @@ Hospital.
         'data/data.xml',
         'views/patient_view.xml',
         'views/kids_view.xml',
+        'views/patient_gender_view.xml',
     ],
     'sequence':'-100',
     'demo': [
