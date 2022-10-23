@@ -132,16 +132,13 @@
         />
 
     <menuitem
-        id="<menuitem
         id="patient_menu_root"
         name="Patients"
         parent="hospital_menu"
         sequence="10"
-        />"
-        name="Patients"
-        parent="hospital_menu"
-        sequence="10"
         />
+
+        
     <menuitem
         id="patient_menu"
         name="Patients"
