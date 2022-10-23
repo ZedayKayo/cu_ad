@@ -42,7 +42,7 @@ class HospitalPatient(models.Model):
         if not vals_list.get('pat_age'):
             vals_list['pat_age'] = 18
         if vals_list.get('reference', _('New')) == _('New'):
-            vals_list['reference'] = self.env['ir.sequence'].next_by_code('hospital.patient.code') or _('New')
+            vals_list['reference'] = self.env['ir.sequence'].next_by_code('hospital.patient') or _('New')
         res = super(HospitalPatient,self).create(vals_list)
         return res
 
