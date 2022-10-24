@@ -17,7 +17,7 @@ Duplicated Contacts To Add Fields To Contact view.
     'data': [
         #'security/ir.model.access.csv',
         #'views/dup_contact.xml',
-        'views/contact.xml',
+        #'views/contact.xml',
     ],
     'sequence':'-100',
     'demo': [
