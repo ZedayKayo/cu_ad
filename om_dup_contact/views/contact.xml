@@ -10,9 +10,11 @@
             <xpath expr="//field[@name='name']" position="before">
                     <field name="con_prenom"  attrs="{'invisible': [('is_company','=', True)]}" placeholder="Entrer Prenom"/>
             </xpath>
+           <!-- 
             <xpath expr="//field[@name='vat']" position="after">
                     <field name="con_n_cin"  attrs="{'invisible': [('is_company','=', True)]}" />
             </xpath>
+           --> 
         </field>
     </record>
    
