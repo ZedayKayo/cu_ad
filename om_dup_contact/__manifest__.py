@@ -11,8 +11,7 @@ Duplicated Contacts To Add Fields To Contact view.
 ===================================================
 """,
     'depends': [
-        'base',
-        'hr'
+        'base'
     ],
     'data': [
         'security/ir.model.access.csv',
