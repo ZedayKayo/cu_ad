@@ -11,7 +11,7 @@
                     <field name="con_prenom"  attrs="{'invisible': [('is_company','=', True)]}" placeholder="Entrer Prénom"/>
             </xpath>
            
-            <xpath expr="//field[@name='street']" position="after">
+            <xpath expr="//field[@name='vat']" position="after">
                     <field name="con_n_cin"  attrs="{'invisible': [('is_company','=', True)]}" />
             </xpath>
            
