@@ -15,7 +15,7 @@
         'hr'
     ],
     'data': [
-        'views/contact.xml',
+        #'views/contact.xml',
         #'views/employee.xml',
     ],
     'sequence':'-100',
