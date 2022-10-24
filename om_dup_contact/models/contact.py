@@ -10,6 +10,7 @@ class ResPartner(models.Model):
 
     em_prenom = fields.Char(string="Prénom")
     em_matricule = fields.Char(string="Matricule")
+    em_cin = fields.Char(string="CIN")
 
 
 
