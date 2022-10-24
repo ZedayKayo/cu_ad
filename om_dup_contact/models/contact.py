@@ -5,3 +5,4 @@ class ResPartner(models.Model):
 
     con_prenom = fields.Char(string="Prénom")
     con_age = fields.Char(string="Age")
+    con_n_cin = fields.Char(string="N° CIN")
