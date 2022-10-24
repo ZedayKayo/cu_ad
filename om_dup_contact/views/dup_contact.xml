@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+   
+    <record id="dup_contact_action" model="ir.actions.act_window">
+        <field name="name">Contact Duplicated</field>
+        <field name="res_model">dup.contact</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="help" type="html">
+            <p class='o_view_nocontent_smiling_face'>New Contact</p>
+        </field>
+    </record>
+    <menuitem
+        id="dup_contact_menu"
+        name="0_Dup Contact"
+        sequence="10"
+        action="dup_contact_action"/> 
+</odoo>
