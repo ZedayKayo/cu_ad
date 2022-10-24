@@ -18,20 +18,5 @@
         </field>
     </record>
 
-    <record id="inherit_view_hr_employee" model="ir.ui.view">
-        <field name="name">hr.employee.inherit</field>
-        <field name="model">hr.employee</field>
-        <field name="inherit_id" ref="hr.view_employee_form"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='name']" position="after">
-                    <field name="em_prenom"  placeholder="Entrer Prénom"/>
-            </xpath>
-           
-            <xpath expr="//field[@name='coach_id']" position="after">
-                    <field name="em_matricule"  />
-            </xpath>
-           
-        </field>
-    </record>
    
 </odoo>

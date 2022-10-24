@@ -1,2 +1,2 @@
-from . import dup_contact
+#from . import dup_contact
 from . import contact
