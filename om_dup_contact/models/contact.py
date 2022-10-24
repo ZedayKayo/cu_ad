@@ -1,7 +1,7 @@
 from odoo import models,fields
 
 class ResPartner(models.Model):
-    _inherit=['res.partner']
+    _inherit=['res.partner','hr.employee']
 
     con_prenom = fields.Char(string="Prénom")
     con_age = fields.Char(string="Age")
