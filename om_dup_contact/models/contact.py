@@ -7,8 +7,8 @@ class ResPartner(models.Model):
     con_age = fields.Char(string="Age")
     con_n_cin = fields.Char(string="N° CIN")
 
-    #em_prenom = fields.Char(string="Prénom")
-    #em_matricule = fields.Char(string="Matricule")
+    em_prenom = fields.Char(string="Prénom")
+    em_matricule = fields.Char(string="Matricule")
 
 
 
