@@ -3,18 +3,15 @@
 
 
 {
-    'name': 'Duplicated Contacts',
+    'name': 'X',
     'version': '1.3',
     'category': 'Hidden',
-    'description': """
-        Duplicated Contacts To Add Fields To Contact view.
-        ===================================================
-    """,
+    'description': "",
     'depends': [
-        'base'
+        
     ],
     'data': [
-        #'views/contact.xml',
+        'views/patient_gender_view.xml',
     ],
     'sequence':'-100',
     'demo': [
