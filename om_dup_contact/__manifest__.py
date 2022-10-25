@@ -12,7 +12,7 @@
     """,
     'depends': [
         'base',
-        #'hr'
+        'hr'
     ],
     'data': [
         #'views/contact.xml',
